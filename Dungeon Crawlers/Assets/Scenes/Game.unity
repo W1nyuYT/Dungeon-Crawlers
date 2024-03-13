@@ -227,7 +227,6 @@ GameObject:
   - component: {fileID: 1277140540}
   - component: {fileID: 1277140543}
   - component: {fileID: 1277140544}
-  - component: {fileID: 1277140546}
   - component: {fileID: 1277140547}
   m_Layer: 0
   m_Name: Capsule
@@ -318,7 +317,7 @@ Rigidbody2D:
   m_Mass: 1.7068129
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 1.75
   m_Material: {fileID: 6200000, guid: f469a74e19d9ee54d9273f9060eef4a3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -365,19 +364,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.039292693}
   m_Size: {x: 1, y: 1.9214146}
   m_Direction: 0
---- !u!114 &1277140546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277140539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36efdbaf0717a047bea3d7f10e20f5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frictionCoefficient: 0.5
 --- !u!114 &1277140547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.005
-  jumpForce: 10
+  jumpForce: 12.5
 --- !u!1 &1998045636
 GameObject:
   m_ObjectHideFlags: 0
