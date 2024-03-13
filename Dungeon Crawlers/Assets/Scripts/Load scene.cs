@@ -1,31 +1,25 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MouseTriggerEvents : MonoBehaviour
+public class LoadSceneOnClick : MonoBehaviour
 {
     // Name of the scene to load
-    public string sceneToLoad;
+    public string sceneName;
 
-    // Update is called once per frame
     void Update()
     {
         // Check for left mouse button click
         if (Input.GetMouseButtonDown(0))
         {
-            // Create a ray from the camera to the mouse position
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            // Check if the ray intersects with any collider
-            if (Physics.Raycast(ray, out hit))
-            {
-                // Check if the collider hit has a tag "Player" (or any other tag you prefer)
-                if (hit.collider.CompareTag("Player"))
-                {
-                    // Load the scene specified by sceneToLoad
-                    SceneManager.LoadScene(sceneToLoad);
-                }
-            }
+            // Check if mouse is over this object
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            LoadScene();
         }
+    }
+
+    void LoadScene()
+    {
+        Debug.Log("t");
+        SceneManager.LoadScene(sceneName);
     }
 }
