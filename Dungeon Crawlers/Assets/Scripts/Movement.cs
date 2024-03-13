@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SimpleMovement : MonoBehaviour
+public class soup : MonoBehaviour
 {
     public float moveSpeed = 0f;
     public float jumpForce = 10f; // Adjust this value to control jump force
@@ -19,16 +19,21 @@ public class SimpleMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             Transform objectTransform = transform;
             Vector2 currentPosition = objectTransform.position;
             Vector2 newPosition = new Vector2(currentPosition.x + (0-moveSpeed), currentPosition.y);
             objectTransform.position = newPosition;
         }
-        float moveInput = Input.GetAxisRaw("Horizontal");
-        Vector2 moveVelocity = new Vector2(moveInput * moveSpeed, rb2d.velocity.y);
-        rb2d.velocity = moveVelocity;
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            Transform objectTransform = transform;
+            Vector2 currentPosition = objectTransform.position;
+            Vector2 newPosition = new Vector2(currentPosition.x + moveSpeed, currentPosition.y);
+            objectTransform.position = newPosition;
+        }
 
         // Jumping
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded)
