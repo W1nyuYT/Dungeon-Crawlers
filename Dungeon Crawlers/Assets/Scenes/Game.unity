@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 1277140542}
   - component: {fileID: 1277140543}
   - component: {fileID: 1277140544}
+  - component: {fileID: 1277140546}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -326,12 +327,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 1.7068129
   m_LinearDrag: 0
-  m_AngularDrag: 1
+  m_AngularDrag: 0
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f469a74e19d9ee54d9273f9060eef4a3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -339,9 +340,9 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1277140544
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -351,7 +352,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1277140539}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: f469a74e19d9ee54d9273f9060eef4a3, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -377,6 +378,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.039292693}
   m_Size: {x: 1, y: 1.9214146}
   m_Direction: 0
+--- !u!114 &1277140546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277140539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36efdbaf0717a047bea3d7f10e20f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1998045636
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,9 +401,10 @@ GameObject:
   - component: {fileID: 1998045639}
   - component: {fileID: 1998045638}
   - component: {fileID: 1998045640}
+  - component: {fileID: 1998045641}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Collider
+  m_TagString: Stationary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,6 +521,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0488944}
   m_EdgeRadius: 0
+--- !u!114 &1998045641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998045636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f773bd5dccc57844a90837a474804782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frictionCoefficient: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
