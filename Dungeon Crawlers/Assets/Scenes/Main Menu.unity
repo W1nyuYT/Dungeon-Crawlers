@@ -706,6 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Multiplayer
+  escName: 
 --- !u!1 &1632149783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Multiplayer
+  escName: Main Menu
 --- !u!114 &2081258180
 MonoBehaviour:
   m_ObjectHideFlags: 0
