@@ -19,7 +19,7 @@ public class soup : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             Transform objectTransform = transform;
             Vector2 currentPosition = objectTransform.position;
@@ -27,7 +27,7 @@ public class soup : MonoBehaviour
             objectTransform.position = newPosition;
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             Transform objectTransform = transform;
             Vector2 currentPosition = objectTransform.position;
