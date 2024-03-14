@@ -19,7 +19,6 @@ public class LoadSceneOnClick : MonoBehaviour
 
     void LoadScene()
     {
-        Debug.Log("t");
         SceneManager.LoadScene(sceneName);
     }
 }
