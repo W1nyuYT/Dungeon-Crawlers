@@ -2,7 +2,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 
-public class Esc : MonoBehaviour
+public class barbecue_sauce : MonoBehaviour
 {
     public string sceneBack;
     void Update()

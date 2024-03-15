@@ -3,10 +3,10 @@ using UnityEngine;
 public class soup : MonoBehaviour
 {
     public float moveSpeed = 0f;
-    public float jumpForce = 10f; // Adjust this value to control jump force
+    public float jumpForce = 10f; 
 
     private Rigidbody2D rb2d;
-    private bool isGrounded; // Flag to track if the object is grounded
+    private bool isGrounded; 
 
     void Start()
     {
@@ -35,7 +35,7 @@ public class soup : MonoBehaviour
             objectTransform.position = newPosition;
         }
 
-        // Jumping
+       
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded)
         {
             Jump();
@@ -44,16 +44,16 @@ public class soup : MonoBehaviour
 
     void Jump()
     {
-        // Apply jump force
+        
         rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        // Check if the object is grounded
+        
         foreach (ContactPoint2D contact in collision.contacts)
         {
-            // Check if the contact normal is pointing upwards (vertical)
+           
             if (Vector2.Dot(contact.normal, Vector2.up) > 0.7f)
             {
                 isGrounded = true;
@@ -64,7 +64,7 @@ public class soup : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        // Reset grounded flag when leaving the ground
+
         isGrounded = false;
     }
 }
