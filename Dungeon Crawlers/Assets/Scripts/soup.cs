@@ -40,6 +40,11 @@ public class soup : MonoBehaviour
         {
             Jump();
         }
+
+        if (transform.position.y < -100f)
+        {
+            transform.position = Vector3.zero;
+        }
     }
 
     void Jump()
