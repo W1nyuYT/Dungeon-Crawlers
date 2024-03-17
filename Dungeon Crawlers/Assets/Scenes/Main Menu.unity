@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 1233337821}
   - component: {fileID: 1233337823}
   - component: {fileID: 1233337822}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,11 +938,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 940798609}
+  - {fileID: 1233337821}
   - {fileID: 772250161}
   - {fileID: 244909905}
   - {fileID: 1672939842}
   - {fileID: 1418260651}
-  - {fileID: 1233337821}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
