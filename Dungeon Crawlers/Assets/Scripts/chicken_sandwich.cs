@@ -5,8 +5,7 @@ public class chicken_sandwich : MonoBehaviour
 {
 
     public string sceneName;
-
-    void OnTriggerExit(Collider other)
+    void OnTrigger(Collider other)
     {
         Debug.Log("debug");
         if (other.CompareTag("Mouse"))
